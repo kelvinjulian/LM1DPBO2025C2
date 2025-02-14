@@ -10,7 +10,23 @@ private:
         string nama;
         string kategori;
         float harga;
-        // string foto;
+
+        // Constructor untuk inisialisasi Product
+        Product(int id, string nama, string kategori, float harga)
+            : id(id), nama(nama), kategori(kategori), harga(harga) {}
+
+        // Getter dan Setter
+        int getId() const { return id; }
+        void setId(int id) { this->id = id; }
+
+        string getNama() const { return nama; }
+        void setNama(const string& nama) { this->nama = nama; }
+
+        string getKategori() const { return kategori; }
+        void setKategori(const string& kategori) { this->kategori = kategori; }
+
+        float getHarga() const { return harga; }
+        void setHarga(float harga) { this->harga = harga; }
     };
 
     vector<Product> products;
@@ -18,7 +34,7 @@ private:
     // Fungsi untuk mengecek apakah ID sudah ada
     bool isDuplicateID(int id) {
         for (const auto& p : products) {
-            if (p.id == id) {
+            if (p.getId() == id) {
                 return true; 
             }
         }
@@ -28,7 +44,7 @@ private:
     // Fungsi untuk mengecek apakah Nama Produk sudah ada
     bool isDuplicateName(const string& name) {
         for (const auto& p : products) {
-            if (p.nama == name) {
+            if (p.getNama() == name) {
                 return true; 
             }
         }
@@ -36,6 +52,13 @@ private:
     }
 
 public:
+    PetShop() {
+        // Menambahkan produk awal
+        products.push_back(Product(1, "Dog Food", "Makanan", 50000));
+        products.push_back(Product(2, "Cat Food", "Makanan", 45000));
+        products.push_back(Product(3, "Shampoo Anjing", "Perawatan", 120000));
+    }
+
     void tampilkanProduk() {
         if (products.empty()) {
             cout << "\nDaftar produk kosong." << endl;
@@ -44,11 +67,10 @@ public:
 
         cout << "\nDaftar Produk PetShop:\n";
         for (const auto& p : products) {
-            cout << "ID: " << p.id 
-                << ", Nama: " << p.nama 
-                << ", Kategori: " << p.kategori
-                << ", Harga: " << p.harga
-                // << ", Foto: " << p.foto 
+            cout << "ID: " << p.getId() 
+                << ", Nama: " << p.getNama() 
+                << ", Kategori: " << p.getKategori()
+                << ", Harga: " << p.getHarga()
                 << endl;
         }
     }
@@ -61,14 +83,12 @@ public:
         getline(cin, input);
 
         stringstream ss(input);
-        string idStr, nama, kategori, hargaStr, foto;
+        string idStr, nama, kategori, hargaStr;
 
         if (getline(ss, idStr, ',') &&
             getline(ss >> ws, nama, ',') &&
             getline(ss >> ws, kategori, ',') &&
-            getline(ss >> ws, hargaStr, ',') 
-            // && getline(ss >> ws, foto)
-            ) {
+            getline(ss >> ws, hargaStr)) {
 
             int id = stoi(idStr);
             float harga = stof(hargaStr);
@@ -83,9 +103,7 @@ public:
                 return;
             }
 
-            products.push_back({id, nama, kategori, harga, 
-            // foto
-            });
+            products.push_back(Product(id, nama, kategori, harga));
             cout << "Produk berhasil ditambahkan!\n";
         } else {
             cout << "Format input tidak valid. Silakan coba lagi.\n";
@@ -100,7 +118,7 @@ public:
 
         bool found = false;
         for (auto& p : products) {
-            if (p.id == id) {
+            if (p.getId() == id) {
                 cout << "Masukkan data baru (ID, Nama Produk, Kategori Produk, Harga Produk):\n";
                 string input;
                 getline(cin, input);
@@ -111,9 +129,7 @@ public:
                 if (getline(ss, idStr, ',') &&
                     getline(ss >> ws, nama, ',') &&
                     getline(ss >> ws, kategori, ',') &&
-                    getline(ss >> ws, hargaStr, ',') 
-                    // && getline(ss >> ws, foto)
-                    ) {
+                    getline(ss >> ws, hargaStr)) {
 
                     int newId = stoi(idStr);
                     float newHarga = stof(hargaStr);
@@ -125,17 +141,16 @@ public:
                     }
 
                     // Pastikan Nama baru tidak bentrok dengan produk lain
-                    if (nama != p.nama && isDuplicateName(nama)) {
+                    if (nama != p.getNama() && isDuplicateName(nama)) {
                         cout << "ERROR: Nama produk baru sudah ada! Gunakan nama lain.\n";
                         return;
                     }
 
                     // Update produk
-                    p.id = newId;
-                    p.nama = nama;
-                    p.kategori = kategori;
-                    p.harga = newHarga;
-                    // p.foto = foto;
+                    p.setId(newId);
+                    p.setNama(nama);
+                    p.setKategori(kategori);
+                    p.setHarga(newHarga);
 
                     cout << "Data produk berhasil diubah.\n";
                     found = true;
@@ -157,7 +172,7 @@ public:
         cin >> id;
 
         for (auto it = products.begin(); it != products.end(); ++it) {
-            if (it->id == id) {
+            if (it->getId() == id) {
                 products.erase(it);
                 cout << "Produk berhasil dihapus.\n";
                 return;
@@ -174,10 +189,9 @@ public:
 
         bool found = false;
         for (const auto& p : products) {
-            if (p.nama == nama) {
-                cout << "Produk ditemukan: ID: " << p.id << ", Nama: " << p.nama
-                     << ", Kategori: " << p.kategori << ", Harga: " << p.harga
-                    //  << ", Foto: " << p.foto 
+            if (p.getNama() == nama) {
+                cout << "Produk ditemukan: ID: " << p.getId() << ", Nama: " << p.getNama()
+                     << ", Kategori: " << p.getKategori() << ", Harga: " << p.getHarga()
                      << endl;
                 found = true;
             }
