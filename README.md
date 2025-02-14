@@ -50,3 +50,7 @@ Berikut adalah beberapa tampilan dari program:
 ### 7. Error Duplikat
 
 ![Error Duplikat](https://github.com/kelvinjulian/LM1DPBO2025C2/blob/main/c%2B%2B/Screenshots/Error%20Duplikat.png)
+
+## Class Diagram
+
+![Class Diagram](https://github.com/kelvinjulian/LM1DPBO2025C2/blob/main/c%2B%2B/Screenshots/PetShop%20Class%20Diagram.png)
