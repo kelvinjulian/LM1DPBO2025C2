@@ -19,23 +19,23 @@ Program terdiri dari dua file utama:
 Berikut adalah beberapa tampilan dari program:
 
 ### 1. Menampilkan Produk
-![Tampilkan Produk](https://github.com/kelvinjulian/LM1DPBO2025C2/blob/main/c%2B%2B/LatihanModul/Screenshots/Tampilkan%20Produk.png)
+![Tampilkan Produk](https://github.com/kelvinjulian/LM1DPBO2025C2/blob/main/c%2B%2B/Screenshots/Tampilkan%20Produk.png)
 
 ### 2. Menambah Produk
-![Tambah Produk](https://github.com/kelvinjulian/LM1DPBO2025C2/blob/main/c%2B%2B/LatihanModul/Screenshots/Tambah%20Produk.png)
+![Tambah Produk](https://github.com/kelvinjulian/LM1DPBO2025C2/blob/main/c%2B%2B/Screenshots/Tambah%20Produk.png)
 
 ### 3. Mengubah Produk
-![Ubah Produk](https://github.com/kelvinjulian/LM1DPBO2025C2/blob/main/c%2B%2B/LatihanModul/Screenshots/Ubah%20Produk.png)
+![Ubah Produk](https://github.com/kelvinjulian/LM1DPBO2025C2/blob/main/c%2B%2B/Screenshots/Ubah%20Produk.png)
 
 ### 4. Menghapus Produk
-![Hapus Produk](https://github.com/kelvinjulian/LM1DPBO2025C2/blob/main/c%2B%2B/LatihanModul/Screenshots/Hapus%20Produk.png)
+![Hapus Produk](https://github.com/kelvinjulian/LM1DPBO2025C2/blob/main/c%2B%2B/Screenshots/Hapus%20Produk.png)
 
 ### 5. Mencari Produk
-![Cari Produk](https://github.com/kelvinjulian/LM1DPBO2025C2/blob/main/c%2B%2B/LatihanModul/Screenshots/Cari%20Produk.png)
+![Cari Produk](https://github.com/kelvinjulian/LM1DPBO2025C2/blob/main/c%2B%2B/Screenshots/Cari%20Produk.png)
 
 ### 6. Keluar dari Program
-![Keluar](https://github.com/kelvinjulian/LM1DPBO2025C2/blob/main/c%2B%2B/LatihanModul/Screenshots/Keluar.png)
+![Keluar](https://github.com/kelvinjulian/LM1DPBO2025C2/blob/main/c%2B%2B/Screenshots/Keluar.png)
 
 ### 7. Error Duplikat
-![Error Duplikat](https://github.com/kelvinjulian/LM1DPBO2025C2/blob/main/c%2B%2B/LatihanModul/Screenshots/Error%20Duplikat.png)
+![Error Duplikat](https://github.com/kelvinjulian/LM1DPBO2025C2/blob/main/c%2B%2B/Screenshots/Error%20Duplikat.png)
 
