@@ -1,5 +1,8 @@
 # LM1DPBO2025C2
 
+# Janji
+Saya Kelvin Julian Putra dengan NIM 2205101 mengerjakan Tugas Praktikum 1 dalam mata kuliah Desain dan Pemrograman Berorientasi Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin
+
 # PetShop
 
 PetShop adalah program berbasis C++ yang menggunakan konsep Object-Oriented Programming (OOP) untuk mengelola daftar produk di sebuah petshop. Program ini memungkinkan pengguna untuk menambahkan, mengubah, menghapus, mencari, dan menampilkan daftar produk.
